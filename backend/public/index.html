@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      <h1>Socket.io</h1>
+      <h5 id="msg"></h5>
+      <section>
+         <div>
+            <div>
+               <p>
+                  <label>User 1</label>
+                  <input type="text" id="user" name="userId"/>
+                  <input type="text" id="room" name="roomId"/>
+                  <button id="btn1" class="btn" data-id="1" data-user="@creator">submit 1</button>
+               </p>
+               <video id="video" width="320" height="240" autoplay muted class="localStream"></video>
+               <button id="close" style="background-color: red">CLOSE 1</button>
+            </div>
+            <div>
+               <p>
+                  <label>User 2</label>
+                  <input type="text" id="user2"  name="userId"/>
+                  <input type="text" id="room2"  name="roomId"/>
+                  <button id="btn2" class="btn" data-id="2" data-user="@joiner">submit 2</button>
+               </p>
+               <video id="video" width="320" height="240" autoplay muted class="remoteStream"></video>
+               <button id="close2" style="background-color: red">CLOSE 2</button>
+            </div>
+         </div>
+      </section>
+
+      <script src="./lib/socket.io.min.js"></script>
+      <script src="./lib/jquery.min.js"></script>
+      <script src="./static/index.js"></script>
+      <!-- <script src="./static/script.js"></script> -->
+   </body>
+</html>

@@ -6,7 +6,7 @@ const { config } = require('dotenv')
 // const { handleError } = require('req-error')
 
 const app = express();
-
+app.use(express.static('public'));
 config({ path: '.env' });
 const PORT = process.env.PORT || 8000;
 
@@ -37,6 +37,10 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.get('/', (req, res) => {
+    res.send('Hello World');
+});
 
 // const globalLimiter = rateLimit({
 //   windowMs: 60 * 60 * 1000,
